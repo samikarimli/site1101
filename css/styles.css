@@ -600,6 +600,19 @@ section h2 {
     background-color: var(--bg-color);
 }
 
+.projects-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 2px solid var(--accent-color);
+}
+
 .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
