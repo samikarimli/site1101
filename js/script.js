@@ -1,29 +1,3 @@
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
-
-document.documentElement.setAttribute('data-theme', currentTheme);
-updateThemeIcon();
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon();
-});
-
-function updateThemeIcon() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const icon = themeToggle.querySelector('i');
-    if (currentTheme === 'dark') {
-        icon.className = 'fas fa-sun';
-    } else {
-        icon.className = 'fas fa-moon';
-    }
-}
-
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -72,12 +46,31 @@ if (contactForm) {
     });
 }
 
+// Scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, observerOptions);
+
+// Observe all sections and timeline items
+document.querySelectorAll('section, .timeline-item').forEach(el => {
+    observer.observe(el);
+});
+
 // Add scroll effect to navigation
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
         header.style.boxShadow = '0 4px 10px var(--shadow)';
     } else {
-        header.style.boxShadow = '0 2px 5px var(--shadow)';
+        header.style.boxShadow = '0 2px 20px var(--shadow)';
     }
 });
