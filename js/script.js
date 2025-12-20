@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme') || 'light';
 
 document.documentElement.setAttribute('data-theme', currentTheme);
-themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+updateThemeIcon();
 
 themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -11,8 +11,18 @@ themeToggle.addEventListener('click', () => {
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    updateThemeIcon();
 });
+
+function updateThemeIcon() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const icon = themeToggle.querySelector('i');
+    if (currentTheme === 'dark') {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
+}
 
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
