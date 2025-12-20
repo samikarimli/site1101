@@ -74,31 +74,3 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '0 2px 20px var(--shadow)';
     }
 });
-
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const themeIcon = themeToggle.querySelector('i');
-
-// Check for saved theme preference or default to dark
-const currentTheme = localStorage.getItem('theme') || 'dark';
-if (currentTheme === 'light') {
-    body.classList.add('light-theme');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-}
-
-// Toggle theme on button click
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    
-    if (body.classList.contains('light-theme')) {
-        localStorage.setItem('theme', 'light');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        localStorage.setItem('theme', 'dark');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-    }
-});

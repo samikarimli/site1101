@@ -10,18 +10,6 @@
     --glow: rgba(255, 215, 0, 0.3);
 }
 
-/* Light theme variables */
-body.light-theme {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --accent-color: #ffd700;
-    --secondary-bg: #f8f9fa;
-    --card-bg: #ffffff;
-    --border-color: #e9ecef;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --glow: rgba(255, 215, 0, 0.2);
-}
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -167,32 +155,6 @@ header {
     background-color: var(--text-color);
     margin: 3px 0;
     transition: 0.3s;
-}
-
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.theme-toggle:hover {
-    background-color: var(--secondary-bg);
-    color: var(--accent-color);
-    transform: scale(1.1);
 }
 
 /* Main content */
@@ -774,10 +736,6 @@ footer {
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 15px;
-    }
-
-    .nav-controls {
-        gap: 15px;
     }
 
     .nav-menu {
