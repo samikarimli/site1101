@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
+    <title>Sami Karimli - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-container">
-                <h1 class="logo">My Portfolio</h1>
+                <h1 class="logo">Sami Karimli</h1>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#party-organizer">Party Organizer</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -27,17 +34,212 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="hero-content">
-                <h2>Welcome to My Portfolio</h2>
-                <p>I'm a passionate developer creating amazing web experiences.</p>
-                <a href="about.html" class="btn">Learn More</a>
+                <h1>Hello, I'm Sami Karimli</h1>
+                <h2>CEO of students community in Azerbaijan</h2>
+                <p>I specialize in building innovative web solutions that drive results. With a passion for technology and leadership, I create digital experiences that make a difference.</p>
+                <div class="hero-buttons">
+                    <a href="#experience" class="btn">View Experience</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a dedicated leader and developer with extensive experience in community building and web development. As CEO of the Azerbaijan Youth Network and VolunteerPlus, I have successfully led initiatives that empower young people and create positive change in our communities.</p>
+                        <p>My journey in technology and leadership has equipped me with the skills to tackle complex challenges and deliver innovative solutions. I believe in the power of collaboration and continuous learning to drive meaningful impact.</p>
+                    </div>
+                    <div class="leadership-roles">
+                        <h3>Leadership Roles</h3>
+                        <ul>
+                            <li>CEO of Azerbaijan Youth Network</li>
+                            <li>CEO of VolunteerPlus</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>🎨 Frontend</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>⚙️ Backend</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>Express</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🎯 Design</h3>
+                        <ul>
+                            <li>UI/UX</li>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🛠️ Tools</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Webpack</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="certificates">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="certificates-list">
+                    <div class="certificate">
+                        <h3>C++ Intro</h3>
+                        <a href="https://www.codecademy.com/profiles/SamiKarimli/certificates/c-plus-plus-intro" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                    <div class="certificate">
+                        <h3>Conditionals & Logic</h3>
+                        <a href="https://www.codecademy.com/profiles/SamiKarimli/certificates/learn-c-plus-plus" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                    <div class="certificate">
+                        <h3>16 Badges</h3>
+                        <a href="https://www.codecademy.com/profiles/SamiKarimli" target="_blank" class="btn">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Admin AYN</h3>
+                            <p>Azerbaijan Youth Network</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>CEO VolunteerPlus</h3>
+                            <p>Leading volunteer initiatives</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>CEO Global Projects</h3>
+                            <p>Managing international projects</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>CEO GREEN YOUTH NETWORK</h3>
+                            <p>Environmental youth leadership</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Audience COP29 Azerbaijan</h3>
+                            <p>Climate conference participation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="party-organizer" class="party-organizer">
+            <div class="container">
+                <h2>Party Organizer</h2>
+                <div class="venues">
+                    <div class="venue">
+                        <h3>🏠 Hayal Kahvesi</h3>
+                        <a href="https://instagram.com/hayal_kahvesi" target="_blank" class="btn">View on Instagram</a>
+                    </div>
+                    <div class="venue">
+                        <h3>🌴 Cuba</h3>
+                        <a href="https://instagram.com/cuba_baku" target="_blank" class="btn">View on Instagram</a>
+                    </div>
+                    <div class="venue">
+                        <h3>🌙 Moon Baku</h3>
+                        <a href="https://instagram.com/moon_baku" target="_blank" class="btn">View on Instagram</a>
+                    </div>
+                    <div class="venue">
+                        <h3>🎵 Stereo Hall</h3>
+                        <a href="https://instagram.com/stereo_hall" target="_blank" class="btn">View on Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/sami-karimli" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/samikarimli" target="_blank">GitHub</a>
+                            <a href="https://www.codecademy.com/profiles/SamiKarimli" target="_blank">Codecademy</a>
+                            <a href="https://instagram.com/sami_karimli" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Sami Karimli. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
